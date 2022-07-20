@@ -1,4 +1,4 @@
-N = 4
+N = 8
 
 
 def solve_NQ(board, col):
@@ -30,13 +30,12 @@ def safe(board, row, col):
             return False
 
     # check if diagonal is safe
-    # only need to check left side diagonals because you move column by column
     pos = [row, col]
     for i in range(1, N):
         if pos[0] - i >= 0 and pos[1] - i >= 0:
             if board[pos[0] - i][pos[1] - i] == 1:
                 return False
-        if pos[0] + i < N and pos[1] + i < N:
+        if pos[0] + i < N:
             if board[pos[0] + i][pos[1] - i] == 1:
                 return False
     return True
