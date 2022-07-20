@@ -7,6 +7,7 @@ def solve_NQ(board, row, col):
     if col == N:
         return True
 
+    # make current position a 1
     board[row][col] = 1
 
     if safe(board, row, col):
