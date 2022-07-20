@@ -32,7 +32,7 @@ def safe(board, row, col):
     # check if diagonal is safe
     pos = [row, col]
     for i in range(1, N):
-        if pos[0] - i >= 0 and pos[1] - i >= 0:
+        if pos[0] - i >= 0:
             if board[pos[0] - i][pos[1] - i] == 1:
                 return False
         if pos[0] + i < N:
