@@ -1,23 +1,19 @@
 N = 4
 
 
-def solve_NQ(board, row, col):
+def solve_NQ(board, col):
 
     # all columns are full
     if col == N:
         return True
 
-    # make current position a 1
-    board[row][col] = 1
+    for i in range(N):
+        if safe(board, i, col):
+            board[i][col] = 1
+            if solve_NQ(board, col + 1):
+                return True
 
-    if safe(board, row, col):
-        row = 0
-        if solve_NQ(board, row, col + 1):
-            return True
-    else:
-        board[row][col] = 0
-        if solve_NQ(board, row + 1, col):
-            return True
+        board[i][col] = 0
 
     return False
 
@@ -25,12 +21,12 @@ def solve_NQ(board, row, col):
 def safe(board, row, col):
     # check if row is safe
     for i in range(N):
-        if board[row][i] == 1 and i != col:
+        if board[row][i] == 1:
             return False
 
     # check if column is safe
     for i in range(N):
-        if board[i][col] == 1 and i != row:
+        if board[i][col] == 1:
             return False
 
     # check if diagonal is safe
