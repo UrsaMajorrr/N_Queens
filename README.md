@@ -1,5 +1,5 @@
 # N_Queens
-I undertook this project last week because I wanted to practice my programming skills after reading the book [Composing Programs](https://composingprograms.com). I didn't want to lose my understanding of what I learned in that book, mostly the recursive topics. The N Queens problem uses a backtracking algorithm to find a solution. This backtracking algorithm contains recursive elements, that will allow me to solidfy my understanding of recursion.
+I undertook this project last week because I wanted to practice my programming skills after reading the book [Composing Programs](https://composingprograms.com). I didn't want to lose my understanding of what I learned in that book, mostly the recursive topics. The N Queens problem uses a backtracking algorithm to find a solution. This backtracking algorithm contains recursive elements that will allow me to solidfy my understanding of recursion.
 
 Overall, this project took me about 10 hours if you factor in the time I needed to learn about backtracking and how it works. To me, 10 hours is not that long to put a project like this on your github and even show it off on a resume. 
 
