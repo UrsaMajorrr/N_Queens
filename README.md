@@ -16,4 +16,9 @@ I noticed some basic concepts that showed up when implementing this algorithm in
 
 From there it really is not that difficult to implement backtracking into your code. One of the more difficult parts is checking for validity. This is where I will discuss problems I had writing this code.
 
-#Problems I Fixed
+# Problems I Fixed
+Like I said, I didn't have any problems implementing backtracking. Where I ran into issues was in implementing my safety checks. The code for checking if a row is safe is not hard. Since the board is just a list of lists, you just had to check if there was another queen in that specific list (portrayed as a 1). However, checking the diagonals is a little more difficult. One thing that saved lots of time was the fact that you only have to check the upper and lower left diagonals because you're placing queens on column at a time. 
+
+This is also where I found out checking different test cases is extremely important. My initial code worked for board sizes 7 x 7 and less (except 3 x 3 and less because those have no solution). When the board size became 8 x 8, I ran into problems. It spit out a solution but an incorrect one, There was also one queen attacking another no matter what. 
+
+I went back through the code and realized that as I was checking diagonals, if I got to the last row, it wouldn't actually check if the diagonal was safe. 
