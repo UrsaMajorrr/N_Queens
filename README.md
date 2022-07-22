@@ -21,4 +21,10 @@ Like I said, I didn't have any problems implementing backtracking. Where I ran i
 
 This is also where I found out checking different test cases is extremely important. My initial code worked for board sizes 7 x 7 and less (except 3 x 3 and less because those have no solution). When the board size became 8 x 8, I ran into problems. It spit out a solution but an incorrect one, There was also one queen attacking another no matter what. 
 
-I went back through the code and realized that as I was checking diagonals, if I got to the last row, it wouldn't actually check if the diagonal was safe. 
+I went back through the code and realized that as I was checking diagonals, if I got to the last row, it wouldn't actually check if the diagonal was safe. To counteract this, I just made where as long as the row you were in plus the current row you were checking is less than the amount of rows N, then check if it's safe. As far as checking the lower left diagonal goes, this means increasing the row variable and decreasing the column variable, making it like a step.
+
+# Improvements
+If I had to make changes, I would add docstrings and more comments. I was horrible in this code with docstrings and comments. I also would have tried to practice unittesting by writing some tests, even though I'm not so good at that yet. Along with that, I check if a column is safe in that safe function. This is useless. A column will always be safe since you place queens column by column.
+
+# Conclusion
+Overall, this was a fun project and I'm so glad that I did it. I thought that initially it was over my head but after some learning it really isn't that bad. I will definitely be doing one of these again so thanks for reading.
